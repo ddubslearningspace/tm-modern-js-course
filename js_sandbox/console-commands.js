@@ -11,6 +11,9 @@ console.log(true);
 var greeting = "Hello";
 console.log(greeting);
 
+// log reference type of variable
+console.log(typeof greeting);
+
 // log an array
 console.log([1,2,3,4]);
 
