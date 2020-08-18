@@ -242,7 +242,6 @@ val = numbers.find(over50);
  *******************/
 
 const today = new Date();
-const year = today.getFullYear();
 const person = {
 	firstName: 'Steve',
 	lastName: 'Smith',
@@ -254,7 +253,7 @@ const person = {
 		state: 'FL'
 	},
 	getBirthYear: function () {
-		return year - this.age;
+		return today.getFullYear() - this.age;
 	}
 }
 
@@ -276,5 +275,32 @@ const people = [
 for (let i = 0; i < people.length; i++) {
 	console.log(people[i].name);
 }
+
+/************************* 
+ * Dates & Times
+ *************************/
+
+let birthday = new Date('9-10-1981 11:25:00');
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
+
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(20);
+birthday.setSeconds(25);
+
+val = birthday;
 
 console.log(val);
