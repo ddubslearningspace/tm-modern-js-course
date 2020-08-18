@@ -58,6 +58,8 @@ val = Number('555');
 val = parseInt('100.03');
 val = parseFloat('100.03');
 
+console.clear();
+
 /**************************** 
  * Numbers & The Math Object
  ****************************/
@@ -84,6 +86,8 @@ val = Math.min(2, 33, 4, 1, 55, 6, 3, -2); // = -2
 val = Math.max(2, 33, 4, 1, 55, 6, 3, -2); // = 55
 val = Math.random(); // = random decimal number
 val = Math.floor(Math.random() * 21); // = random number between 0 and 20
+
+console.clear();
 
 /************************* 
  * String Methods
@@ -142,6 +146,8 @@ val = str.replace('Brad', 'Jack');
 // includes()
 val = str.includes('Hello');
 
+console.clear();
+
 /************************* 
  * Template Literals
  ************************/
@@ -170,7 +176,9 @@ html = `
   </ul>
 `;
 
-document.body.innerHTML = html;
+// document.body.innerHTML = html;
+
+console.clear();
 
 /************************* 
  * Arrays & Array Meathods
@@ -237,6 +245,8 @@ function over50(num) {
 
 val = numbers.find(over50);
 
+console.clear();
+
 /********************
  * Object Literals
  *******************/
@@ -276,6 +286,8 @@ for (let i = 0; i < people.length; i++) {
 	console.log(people[i].name);
 }
 
+console.clear();
+
 /************************* 
  * Dates & Times
  *************************/
@@ -302,5 +314,103 @@ birthday.setMinutes(20);
 birthday.setSeconds(25);
 
 val = birthday;
+
+console.clear();
+
+/************************************* 
+ * IF Statement & Comparison Operators
+ *************************************/
+
+const id = 100;
+
+// EQUAL TO
+if(id == 100){
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// NOT EQUAL TO
+if(id != 101){
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// EQUAL TO VALUE & TYPE
+if(id === 100){
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// EQUAL TO VALUE & TYPE
+if(id !== 100){
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// Test if undefined
+if(typeof id !== 'undefined'){
+  console.log(`The ID is ${id}`);
+} else {
+  console.log('NO ID');
+}
+
+// GREATER OR LESS THAN
+if(id <= 100){
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
+
+// IF ELSE
+
+const color = 'yellow';
+
+if(color === 'red'){
+  console.log('Color is red');
+} else if(color === 'blue'){
+  console.log('Color is blue');
+} else {
+  console.log('Color is not red or blue');
+}
+
+// LOGICAL OPERATORS
+
+name = firstName;
+
+// AND &&
+if(age > 0 && age < 12){
+  console.log(`${name} is a child`);
+} else if(age >= 13 && age <= 19){
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
+}
+
+// OR ||
+if(age < 16 || age > 65){
+  console.log(`${name} can not run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// WITHOUT BRACES
+if(id === 100)
+  console.log('CORRECT');
+else
+  console.log('INCORRECT');
+
+if(id === 100)
+  console.log('CORRECT');
+else
+  console.log('INCORRECT');
+
+console.clear();
 
 console.log(val);
