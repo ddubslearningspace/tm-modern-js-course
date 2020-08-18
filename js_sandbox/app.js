@@ -1,6 +1,6 @@
 /************************* 
  * Using the console
- *************************/ 
+ *************************/
 
 // log a string
 console.log('Hello World');
@@ -19,13 +19,13 @@ console.log(greeting);
 console.log(typeof greeting);
 
 // log an array
-console.log([1,2,3,4]);
+console.log([1, 2, 3, 4]);
 
 // log an object
-console.log({a:1, b:2});
+console.log({ a: 1, b: 2 });
 
 // log an object formatted as table
-console.table({a:1, b:2});
+console.table({ a: 1, b: 2 });
 
 // show a console error
 console.error('This is an error.');
@@ -35,10 +35,10 @@ console.warn('This is a warning.');
 
 // measure the time to execute some directions 
 console.time('Hello');
-  console.log('1');
-  console.log('2');
-  console.log('3');
-  console.log('4');
+console.log('1');
+console.log('2');
+console.log('3');
+console.log('4');
 console.timeEnd('Hello');
 
 // clear the console
@@ -46,11 +46,11 @@ console.clear();
 
 /**************************** 
  * Data types and conversion
- ****************************/ 
+ ****************************/
 
 // Variable types
 let valVariable = 'Can change.';
-const valConstant = 'Can not change.'; 
+const valConstant = 'Can not change.';
 
 // Type conversion
 val = String(5);
@@ -60,7 +60,7 @@ val = parseFloat('100.03');
 
 /**************************** 
  * Numbers & The Math Object
- ****************************/ 
+ ****************************/
 
 // Simple Math
 const num1 = 100;
@@ -80,14 +80,14 @@ val = Math.floor(2.9); // = 2
 val = Math.sqrt(64);   // = 8
 val = Math.abs(-3);    // = 3
 val = Math.pow(8, 2);  // = 64
-val = Math.min(2,33,4,1,55,6,3,-2); // = -2
-val = Math.max(2,33,4,1,55,6,3,-2); // = 55
+val = Math.min(2, 33, 4, 1, 55, 6, 3, -2); // = -2
+val = Math.max(2, 33, 4, 1, 55, 6, 3, -2); // = 55
 val = Math.random(); // = random decimal number
 val = Math.floor(Math.random() * 21); // = random number between 0 and 20
 
 /************************* 
  * String Methods
- *************************/ 
+ *************************/
 
 const firstName = 'William';
 const lastName = 'Johnson';
@@ -107,7 +107,7 @@ val = 'Hello, my name is ' + firstName + ' and I am ' + age;
 val = 'That\'s awesome, I can\'t wait';
 
 // Length
-val = firstName.length; 
+val = firstName.length;
 
 // concat()
 val = firstName.concat(' ', lastName);
@@ -127,10 +127,10 @@ val = firstName.charAt(2);
 val = firstName.charAt(firstName.length - 1);
 
 // substring()
-val = firstName.substring(0,4);
+val = firstName.substring(0, 4);
 
 // slice()
-val = firstName.slice(0,4);
+val = firstName.slice(0, 4);
 val = firstName.slice(-3);
 
 // split()
@@ -151,7 +151,7 @@ const city = 'Miami';
 let html;
 
 function hello() {
-  return 'hello';
+	return 'hello';
 }
 
 // Without templete literals (es5)
@@ -174,13 +174,13 @@ document.body.innerHTML = html;
 
 /************************* 
  * Arrays & Array Meathods
- *************************/ 
+ *************************/
 
 // Create some arrays
-const numbers = [43,56,33,23,44,36,5];
-const numbers2 = new Array(22,45,33,76,54);
+const numbers = [43, 56, 33, 23, 44, 36, 5];
+const numbers2 = new Array(22, 45, 33, 76, 54);
 const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
-const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+const mixed = [22, 'Hello', true, undefined, null, { a: 1, b: 1 }, new Date()];
 
 // Get array length
 val = numbers.length;
@@ -209,7 +209,7 @@ numbers.pop();
 // Take off from front
 numbers.shift();
 // Splice values
-numbers.splice(1,3);
+numbers.splice(1, 3);
 // Reverse
 numbers.reverse();
 
@@ -221,22 +221,60 @@ val = fruit.sort();
 val = numbers.sort();
 
 // Use the "compare function"
-val = numbers.sort(function(x, y){
-  return x - y;
+val = numbers.sort(function (x, y) {
+	return x - y;
 });
 
 // Reverse sort
-val = numbers.sort(function(x, y){
-  return y - x;
+val = numbers.sort(function (x, y) {
+	return y - x;
 });
 
 // Find
-function over50(num){
-  return num > 50;
+function over50(num) {
+	return num > 50;
 }
 
 val = numbers.find(over50);
 
-console.log(numbers);
+/********************
+ * Object Literals
+ *******************/
+
+const today = new Date();
+const year = today.getFullYear();
+const person = {
+	firstName: 'Steve',
+	lastName: 'Smith',
+	age: 30,
+	email: 'steve@aol.com',
+	hobbies: ['music', 'sports'],
+	address: {
+		city: 'Miami',
+		state: 'FL'
+	},
+	getBirthYear: function () {
+		return year - this.age;
+	}
+}
+
+// Get a specifiv value
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1];
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
+
+const people = [
+	{ name: 'John', age: 30 },
+	{ name: 'Mike', age: 23 },
+	{ name: 'Nancy', age: 40 }
+]
+
+for (let i = 0; i < people.length; i++) {
+	console.log(people[i].name);
+}
 
 console.log(val);
