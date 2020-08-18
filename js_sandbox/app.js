@@ -1,3 +1,7 @@
+/************************* 
+ * Using the console
+ *************************/ 
+
 // log a string
 console.log('Hello World');
 
@@ -40,8 +44,12 @@ console.timeEnd('Hello');
 // clear the console
 console.clear();
 
+/**************************** 
+ * Data types and conversion
+ ****************************/ 
+
 // Variable types
-let val = 'Can change.';
+let valVariable = 'Can change.';
 const valConstant = 'Can not change.'; 
 
 // Type conversion
@@ -49,6 +57,10 @@ val = String(5);
 val = Number('555');
 val = parseInt('100.03');
 val = parseFloat('100.03');
+
+/**************************** 
+ * Numbers & The Math Object
+ ****************************/ 
 
 // Simple Math
 const num1 = 100;
@@ -73,7 +85,10 @@ val = Math.max(2,33,4,1,55,6,3,-2); // = 55
 val = Math.random(); // = random decimal number
 val = Math.floor(Math.random() * 21); // = random number between 0 and 20
 
-// String Methods
+/************************* 
+ * String Methods
+ *************************/ 
+
 const firstName = 'William';
 const lastName = 'Johnson';
 const age = 36;
@@ -127,7 +142,10 @@ val = str.replace('Brad', 'Jack');
 // includes()
 val = str.includes('Hello');
 
-// Template Literals
+/************************* 
+ * Template Literals
+ ************************/
+
 const job = 'Web Developer';
 const city = 'Miami';
 let html;
