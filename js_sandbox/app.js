@@ -324,92 +324,135 @@ console.clear();
 const id = 100;
 
 // EQUAL TO
-if(id == 100){
-  console.log('CORRECT');
+if (id == 100) {
+	console.log('CORRECT');
 } else {
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 }
 
 // NOT EQUAL TO
-if(id != 101){
-  console.log('CORRECT');
+if (id != 101) {
+	console.log('CORRECT');
 } else {
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 }
 
 // EQUAL TO VALUE & TYPE
-if(id === 100){
-  console.log('CORRECT');
+if (id === 100) {
+	console.log('CORRECT');
 } else {
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 }
 
 // EQUAL TO VALUE & TYPE
-if(id !== 100){
-  console.log('CORRECT');
+if (id !== 100) {
+	console.log('CORRECT');
 } else {
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 }
 
 // Test if undefined
-if(typeof id !== 'undefined'){
-  console.log(`The ID is ${id}`);
+if (typeof id !== 'undefined') {
+	console.log(`The ID is ${id}`);
 } else {
-  console.log('NO ID');
+	console.log('NO ID');
 }
 
 // GREATER OR LESS THAN
-if(id <= 100){
-  console.log('CORRECT');
+if (id <= 100) {
+	console.log('CORRECT');
 } else {
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 }
 
 // IF ELSE
 
 const color = 'yellow';
 
-if(color === 'red'){
-  console.log('Color is red');
-} else if(color === 'blue'){
-  console.log('Color is blue');
+if (color === 'red') {
+	console.log('Color is red');
+} else if (color === 'blue') {
+	console.log('Color is blue');
 } else {
-  console.log('Color is not red or blue');
+	console.log('Color is not red or blue');
 }
 
 // LOGICAL OPERATORS
 
-name = firstName;
-
 // AND &&
-if(age > 0 && age < 12){
-  console.log(`${name} is a child`);
-} else if(age >= 13 && age <= 19){
-  console.log(`${name} is a teenager`);
+if (age > 0 && age < 12) {
+	console.log(`${firstName} is a child`);
+} else if (age >= 13 && age <= 19) {
+	console.log(`${firstName} is a teenager`);
 } else {
-  console.log(`${name} is an adult`);
+	console.log(`${firstName} is an adult`);
 }
 
 // OR ||
-if(age < 16 || age > 65){
-  console.log(`${name} can not run in race`);
+if (age < 16 || age > 65) {
+	console.log(`${firstName} can not run in race`);
 } else {
-  console.log(`${name} is registered for the race`);
+	console.log(`${firstName} is registered for the race`);
 }
 
 // TERNARY OPERATOR
 console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
 
 // WITHOUT BRACES
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+	console.log('CORRECT');
 else
-  console.log('INCORRECT');
+	console.log('INCORRECT');
 
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+	console.log('CORRECT');
 else
-  console.log('INCORRECT');
+	console.log('INCORRECT');
+
+console.clear();
+
+/************************* 
+ * Switches
+ *************************/
+
+switch (color) {
+	case 'red':
+		console.log('Color is red');
+		break;
+	case 'yellow':
+		console.log('Color is yellow');
+		break;
+	default:
+		console.log('Color is not red or yellow');
+}
+
+let day;
+
+switch (new Date().getDay()) {
+	case 0:
+		day = 'Sunday';
+		break;
+	case 1:
+		day = 'Monday';
+		break;
+	case 2:
+		day = 'Tuesday';
+		break;
+	case 3:
+		day = 'Wednesday';
+		break;
+	case 4:
+		day = 'Thursday';
+		break;
+	case 5:
+		day = 'Friday';
+		break;
+	case 6:
+		day = 'Saturday';
+		break;
+}
+
+val = `Today is ${day}`;
 
 console.clear();
 
