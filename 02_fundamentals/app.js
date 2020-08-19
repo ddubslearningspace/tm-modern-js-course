@@ -540,7 +540,7 @@ while (i < 10) {
 do {
 	console.log('Number ' + i);
 	i++;
-} 
+}
 
 while (i < 14)
 
@@ -554,7 +554,7 @@ for (let i = 0; i < cars.length; i++) {
 }
 
 // FOREACH LOOP
-cars.forEach(function(car, index, array){
+cars.forEach(function (car, index, array) {
 	console.log(`${index} : ${car}`);
 });
 
@@ -562,13 +562,13 @@ console.clear();
 
 // MAP
 const users = [
-	{id: 1, name: 'John'},
-	{id: 2, name: 'Sara'},
-	{id: 3, name: 'Karen'},
-	{id: 4, name: 'Steve'}
+	{ id: 1, name: 'John' },
+	{ id: 2, name: 'Sara' },
+	{ id: 3, name: 'Karen' },
+	{ id: 4, name: 'Steve' }
 ]
 
-const ids = users.map(function(user) {
+const ids = users.map(function (user) {
 	return user.id;
 });
 
@@ -643,4 +643,37 @@ val = window.navigator.platform;
 val = window.navigator.vendor;
 val = window.navigator.language;
 
-console.log(val);
+/***************
+ * Block Scope
+ **************/
+
+// Global scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+// Function Scope
+function test() {
+	var a = 4;
+	let b = 5;
+	const c = 6;
+	console.log('Function Scope: ', a, b, c);
+}
+
+test();
+
+// Block Scope
+if (true) {
+	var a = 6;
+	let b = 5;
+	const c = 6;
+	console.log('If Scope: ', a, b, c);	
+}
+
+for(let a = 0; a < 10; a++) {
+	console.log(`Loop ${a}`);
+}
+
+console.log('Global Scope: ', a, b, c);
+
+// console.log(val);
