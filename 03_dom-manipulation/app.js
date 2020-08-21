@@ -43,6 +43,8 @@ scriptsArr.forEach(function(script) {
 
 console.log(val);
 
+console.clear();
+
 /***************************
  * Single element selectors
  ***************************/
@@ -82,6 +84,8 @@ document.querySelector('li:nth-child(3)').style.color = 'yellow';
 document.querySelector('li:nth-child(4)').textContent = 'Hello World';
 document.querySelector('li:nth-child(odd)').style.background = '#ccc';
 document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+
+console.clear();
 
 /******************************
  * Multiple element selectors
@@ -136,5 +140,6 @@ for(let i = 0; i < liEven.length; i++){
   liEven[i].style.background = '#f4f4f4';
 }
 
-
 console.log(items);
+
+console.clear();
